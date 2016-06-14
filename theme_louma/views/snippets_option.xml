@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+
+        <template id="tab_snippet_structure_louma" inherit_id="website.snippets" name="Tab Snippet Structure Louma">
+            <xpath expr='//ul/li/a[@href="#snippet_effect"]' position="after">
+                    <li>
+                        <a href="#snippet_structure_louma"  class="scroll-link">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-square fa-stack-2x fa-inverse" style="color:#d3b61c;"></i>
+                                <i class="fa fa-paint-brush fa-stack-1x" style="color:#fff;"/>
+                            </span>
+                        </a>
+                    </li>
+            </xpath>
+			<xpath expr="//div[@id='snippet_effect']" position="after">
+                <div id="snippet_structure_louma" class="o_panel">
+                    <div class="o_panel_header" style="background-color:#d3b61c;color:#fff;">
+                        <span class="fa-stack">
+                            <i class="fa fa-paint-brush"></i>
+                        </span> Louma
+                    </div>
+                    <div class="o_panel_body">
+
+                    </div>
+                </div>
+			</xpath>
+        </template>
+
+
+        <template id="separator_snippet_options" inherit_id="website.snippet_options">
+            <xpath expr="//div[@data-js='blog-style']" position="replace">
+                <div data-js='blog-style'
+                    data-selector="section:not(.carousel):not(.parallax):not(.o_gallery):not(.louma)">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Style</a>
+                        <ul class="dropdown-menu">
+                            <li data-toggle_class="para_large"><a>Bigger Text</a></li>
+                            <li data-toggle_class="readable"><a>Narrow</a></li>
+                        </ul>
+                    </li>
+                </div>
+            </xpath>
+            <xpath expr="//div[@data-js='background']" position="replace">
+                <div data-js='background'
+                    data-selector="section:not(.louma),:not(.o_gallery > .container) > .carousel, .parallax">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Background</a>
+                        <ul class="dropdown-menu">
+                            <li data-background="/website/static/src/img/parallax/parallax_bg.jpg"><a>Sunflower</a></li>
+                            <li data-background="/website/static/src/img/banner/business_guy.jpg"><a>Business Guy</a></li>
+                            <li data-background="/website/static/src/img/banner/flower_field.jpg"><a>Flowers Field</a></li>
+                            <li data-background="/website/static/src/img/banner/landscape.jpg"><a>Landscape</a></li>
+                            <li data-background="/website/static/src/img/banner/mountains.jpg"><a>Mountains</a></li>
+                            <li data-background="/website/static/src/img/banner/greenfields.jpg"><a>Greenfields</a></li>
+                            <li data-background="/website/static/src/img/banner/aqua.jpg"><a>Aqua</a></li>
+                            <li data-background="/website/static/src/img/banner/baby_blue.jpg"><a>Baby Blue</a></li>
+                            <li data-background="/website/static/src/img/banner/black.jpg"><a>Black</a></li>
+                            <li data-background="/website/static/src/img/banner/color_splash.jpg"><a>Color Splash</a></li>
+                            <li data-background="/website/static/src/img/banner/mango.jpg"><a>Mango</a></li>
+                            <li data-background="/website/static/src/img/banner/orange_red.jpg"><a>Orange Red</a></li>
+                            <li data-background="/website/static/src/img/banner/flower.jpg"><a>Purple</a></li>
+                            <li data-background="/website/static/src/img/banner/velour.jpg"><a>Velour</a></li>
+                            <li data-background="/website/static/src/img/banner/wood.jpg"><a>Wood</a></li>
+                            <li data-background="/website/static/src/img/banner/yellow_green.jpg"><a>Yellow Green</a></li>
+                            <li data-background="/website/static/src/img/parallax/quote.png"><a>Quote</a></li>
+                            <li data-background=""><a>None</a></li>
+                            <li><a style="background: none; padding: 5px; border-top: 1px solid #ddd;"></a></li>
+                            <li data-choose_image="choose_image"><a><b>Choose an image...</b></a></li>
+                        </ul>
+                    </li>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@data-js='colorpicker']" position="replace">
+                <div data-js='colorpicker'
+                    data-selector="section:not(.jumbotron):not(.louma), :not(.o_gallery > .container) > .carousel, .parallax">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Color</a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                        </ul>
+                    </li>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@data-js='background']" position="after">
+                <div data-js='background' data-snippet-option-id='louma_option_background' data-selector=".louma">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Background Louma</a>
+                        <ul class="dropdown-menu">
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg1.jpg"><a>Option 1</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg2.jpg"><a>Option 2</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg3.jpg"><a>Option 3</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg4.jpg"><a>Option 4</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg5.jpg"><a>Option 5</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg6.jpg"><a>Option 6</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg7.jpg"><a>Option 7</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg8.jpg"><a>Option 8</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg9.jpg"><a>Option 9</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg10.jpg"><a>Option 10</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg11.jpg"><a>Option 11</a></li>
+                            <li data-background="/theme_louma/static/src/images/theme/background/bg12.jpg"><a>Option 12</a></li>
+                            <li data-background=""><a>None</a></li>
+                            <li><a style="background: none; padding: 5px; border-top: 1px solid #ddd;"></a></li>
+                            <li data-choose_image="choose_image"><a><b>Choose an image...</b></a></li>
+                        </ul>
+                    </li>
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@data-js='colorpicker']" position="after">
+                <div   data-selector=".louma">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Color</a>
+                        <ul class="dropdown-menu">
+                              <table style="background-color:white">
+                                  <tr>
+                                      <td><li data-select_class="opt_red_bg"><a><i class="fa fa-square fa-2x" style="color:#e84c3d;padding-right: 7px;padding-left: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_blue_bg"><a><i class="fa fa-square fa-2x" style="color:#3d78d8;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_green_bg"><a><i class="fa fa-square fa-2x" style="color:#db7093;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_orange_bg"><a><i class="fa fa-square fa-2x" style="color:#0d8609;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_gray_bg"><a><i class="fa fa-square fa-2x" style="color:#f1f1f1;;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_pink_bg"><a><i class="fa fa-square fa-2x" style="color:#4e5b5e;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_purple_bg"><a><i class="fa fa-square fa-2x" style="color:#954db3;padding-right: 7px;"></i></a></li></td>
+
+                                  </tr>
+                                  <tr>
+                                      <td><li data-select_class="opt_dark_cyan_bg"><a><i class="fa fa-square fa-2x" style="color:#009798;padding-right: 7px;padding-left: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_yellow_bg"><a><i class="fa fa-square fa-2x" style="color:#d3b61c;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_light_blue_bg"><a><i class="fa fa-square fa-2x" style="color:#38c7f4 ;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_brown_bg"><a><i class="fa fa-square fa-2x" style="color:#7a5230 ;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_light_green_bg"><a><i class="fa fa-square fa-2x" style="color:#599f06 ;padding-right: 7px;"></i></a></li></td>
+                                      <td><li data-select_class="opt_dark_red_bg"><a><i class="fa fa-square fa-2x" style="color:#8e1e13 ;padding-right: 7px;"></i></a></li></td>
+
+                                      <td><li data-select_class=""><a><i class="fa fa-times fa-2x" style="padding-right: 7px;"></i></a></li></td>
+                                  </tr>
+                              </table>
+                        </ul>
+                    </li>
+
+                </div>
+            </xpath>
+
+            <xpath expr="//div[@data-js='background']" position="after">
+                <div   data-selector=".row > [class*='testimonial-col-louma col-md-'],.row > [class*='big-icon-col-louma col-md-'],.row > [class*='features-col-louma col-md-']">
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#">Background Color</a>
+                        <ul class="dropdown-menu">
+                              <li data-select_class="default-bg"><a>Default</a></li>
+                              <li data-select_class="gray-bg"><a>Gray</a></li>
+                              <li data-select_class="dark-bg"><a>Dark</a></li>
+                              <li data-select_class="white-bg"><a>White</a></li>
+                        </ul>
+                    </li>
+
+                </div>
+            </xpath>
+
+        </template>
+
+    </data>
+</openerp>
