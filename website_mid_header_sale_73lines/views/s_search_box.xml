@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="website_language_flag_73lines.top_menu_flags"
+			name="website_lang_menu_option" inherit_id="website.layout">
+		</template>
+
+		<template id="top_menu_flags_mid_menu" name="website_lang_menu_option">
+			<t t-call="website_language_flag_73lines.language_flags"/>
+		</template>
+
+		<template id="website_sale.header" inherit_id="website.layout"
+			name="Header Shop My Cart Link">
+			<xpath expr="//header//ul[@id='top_menu']/li" position="before">
+			</xpath>
+		</template>
+
+		<template id="header_of_sale" t-name="Header Shop My Cart Link">
+			<t t-set="website_sale_order" t-value="website.sale_get_order()" />
+			<t t-if="website_sale_order">
+				<span
+					t-att-class="'' if website_sale_order and website_sale_order.cart_quantity else 'hidden'">
+					<a href="/shop/cart">
+						<i class="fa fa-shopping-cart"></i>
+						<sup t-attf-class="my_cart_quantity label label-primary"
+							t-esc="website_sale_order and website_sale_order.cart_quantity or ''" />
+					</a>
+				</span>
+			</t>
+		</template>
+
+		<template id="s_search_box" name="Search Box">
+			<section class="s_search_box">
+				<div class="col-md-4">
+					<t t-call="website_sale.search" />
+				</div>
+			</section>
+		</template>
+
+		<template name="Search hidden fields" t-name="website_sale.search">
+			<t t-if="category">
+				<form
+					t-att-action="keep('/shop'+ ('/category/'+slug(category)) if category else '', search=0)"
+					method="get" t-att-class="search_class">
+
+					<t t-if="attrib_values">
+						<t t-foreach="attrib_values" t-as="a">
+							<input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+						</t>
+					</t>
+					<t t-call="website.website_search_box" />
+				</form>
+			</t>
+			<t t-if="not category">
+				<form action="/shop" method="get" t-att-class="search_class">
+
+					<t t-if="attrib_values">
+						<t t-foreach="attrib_values" t-as="a">
+							<input type="hidden" name="attrib" t-att-value="'%s-%s' % (a[0], a[1])" />
+						</t>
+					</t>
+					<t t-call="website.website_search_box" />
+				</form>
+			</t>
+		</template>
+	</data>
+</openerp>

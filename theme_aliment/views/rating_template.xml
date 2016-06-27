@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="rating.rating_card" name="Rating Card">
+			<div class="o_rating_card">
+				<div class="">
+					<!-- popover 'button' -->
+					<div class="rating" data-placement="top" data-toggle="rating-popover">
+						<t t-call="rating.rating_star_card">
+							<t t-set="rating_default_value" t-value="'%.2f' % (rating_stat.get('avg', 0.0),)" />
+							<t t-set="rating_disabled" t-value="True" />
+						</t>
+						<!-- <i class="fa fa-user"> <t t-esc="rating_stat.get('total', 0)" 
+							/> </i> -->
+					</div>
+					<!-- popover core -->
+					<div class="popover rating_popover" role="tooltip">
+						<div class="arrow"></div>
+						<div class="popover-content">
+							<t t-foreach="rating_stat.get('percent')" t-as="percent">
+								<t t-if="min_rate &lt;= percent and percent &lt;= max_rate">
+									<div class="progress" style="width:200px;">
+										<div class="progress-bar" role="progressbar"
+											aria-valuemin="0" aria-valuemax="100"
+											t-att-aria-valuenow="rating_stat['percent'][percent]"
+											t-attf-style="width: #{rating_stat['percent'][percent]}%">
+											<span class="sr-only">
+												<t t-esc="rating_stat['percent'][percent]" />
+												%
+											</span>
+										</div>
+										<span class="progress_type">
+											<t t-esc="percent" />
+											<i class="fa fa-star" />
+										</span>
+										<span class="progress_completed">
+											<t t-esc="rating_stat['percent'][percent]" />
+											%
+										</span>
+									</div>
+								</t>
+							</t>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+	</data>
+</openerp>

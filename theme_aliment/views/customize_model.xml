@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<!-- Customize Model -->
+
+		<template id="theme_aliment_customize_model"
+			inherit_id="website_customize_model_73lines.all_theme_customize_modal"
+			name="Theme aliment Customize Modal">
+			<!-- Color Scheme -->
+			<xpath expr="//input[@id='scheme_color_mango']" position="replace">
+				<input id="scheme_color_mango" type="radio" name="scheme_color_var"
+					data-xmlid="website_customize_model_73lines.colors_mango" active="False" />
+			</xpath>
+			<!-- Color Scheme -->
+			<!-- Font -->
+
+			<xpath expr="//input[@id='font_advent']" position="replace">
+				<input name="font_var" type="radio" id="font_raleway"
+					data-xmlid="website_customize_model_73lines.font_raleway_helvetica"
+					active="True" />
+				Raleway / Helvetica
+			</xpath>
+
+			<xpath expr="//input[@id='font_bitter']" position="replace">
+				<input name="font_var" type="radio" id="font_bitter"
+					data-xmlid="website_customize_model_73lines.font_bitter_sarif" />
+				Bitter / Sarif
+			</xpath>
+		</template>
+		<!-- Font -->
+
+
+		<!-- End customize Model -->
+
+
+		<!-- Assets Overwrite -->
+
+		<!-- Color Scheme -->
+
+		<template id="website_customize_model_73lines.colors_mango"
+			name="option_colors_mango" inherit_id="website.assets_frontend"
+			active="False" customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/colors/colors_mango.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+
+
+		<!-- Color Scheme -->
+
+
+		<!-- Font -->
+
+		<template id="website_customize_model_73lines.font_raleway_helvetica"
+			name="font_raleway_helvetica" inherit_id="website.assets_frontend"
+			active="True" customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/fonts/font_raleway_helvetica.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+
+
+		<template id="website_customize_model_73lines.font_advent_pro_oxygen"
+			name="font_advent_pro_oxygen" inherit_id="website.assets_frontend"
+			active="False" customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/fonts/font_advent_pro_oxygen.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+		<!-- Font -->
+
+
+		<!-- End Assets Overwrite -->
+		<!-- New Color Scheme For Theme aliment -->
+		<template id="theme_aliment_customize_model"
+			inherit_id="website_customize_model_73lines.all_theme_customize_modal">
+
+			<xpath
+				expr="//div[@class='col-xs-6 col-sm-6 col-md-6 col-lg-6']/label[@class='icon checked']"
+				position="after">
+				<label class="icon">
+					<input id="scheme_color_aliment" type="radio" name="scheme_color_var"
+						data-xmlid="theme_aliment.colors_aliment" active="True" />
+					<span class="aliment-primary"></span>
+					<span class="aliment-success"></span>
+					<span class="aliment-info"></span>
+					<span class="aliment-warning"></span>
+					<span class="aliment-danger"></span>
+				</label>
+			</xpath>
+		</template>
+
+
+		<template id="website_customize_model_73lines.footer_dark" name="footer_dark" inherit_id="website.assets_frontend"
+			active="True" customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/layouts/footer_dark.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+		
+		<template id="website_customize_model_73lines.footer_white" name="footer_white" inherit_id="website.assets_frontend"
+			active="False" customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/layouts/footer_white.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+	</data>
+</openerp>

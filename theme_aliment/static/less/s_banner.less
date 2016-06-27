@@ -1,0 +1,116 @@
+.carousel-indicators li
+{
+	width:15px;
+	height:15px;
+	background-color:transparent !important;
+	
+}
+header a.navbar-brand img {
+    max-height: 85px;
+}
+#top_menu{ padding:17px 0;
+}
+#nav_right > li.price > div > a{
+	font-weight:600;
+}
+div.carousel .carousel-indicators li {
+	    border: 2px solid #a3a19e;
+}
+
+div.carousel .carousel-indicators .active {
+    border:2px solid #fff;
+}
+
+.carousel-indicators .active {
+   
+    width: 15px !important;
+    height: 15px !important;
+    background-color:transparent;
+    margin:1px !important;
+}
+
+
+
+.carousel-control {
+    			position: absolute;
+    			top: 0;
+    			bottom: 0;
+    			left: 0;
+    			width: 15%;
+    			font-size: 20px;
+    			color: #fff;
+    			text-align: center;
+    			text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+    			filter: alpha(opacity=50);
+    			opacity: 1;			
+    			&.left ,
+    			&.right {    			     
+    				  background-image:none !important;				  
+    				  background-repeat: repeat-x;
+    				 
+    			}    			
+    			&>i{
+    				
+    				padding:13px 13px;
+    				border:none;
+    				color:white;
+    				background: rgba(0, 0, 0, 0.5);
+    			}
+    			&:hover,
+    			&:focus{    				 
+    				  &>i{
+    				    background-color:white;
+                        padding:13px 13px;
+                        border:none;
+                        color: #a1a1a1;
+    					border-color: transparent;
+    				  }
+    			}
+}
+
+.carousel .carousel-control.left *{
+	right:36% !important;
+	top:41% !important;
+}
+
+.carousel .carousel-control.right * {
+	left:36% !important;
+	top:41% !important;
+}
+
+
+@media (max-width: 400px){
+
+		.carousel .carousel-control.right * {
+			left:-40% !important;
+			top:30% !important;
+		}
+		
+		.carousel .carousel-control.left *{
+			right:-40% !important;
+			top:31% !important;
+		}
+		
+		.carousel-control>i:hover,
+		.carousel-control>i:focus {
+   			 padding: 11px 12px !important;
+   		}
+   		
+   		.carousel-control>i {
+   			 padding: 11px 12px !important;
+   		}
+   		
+   		.carousel-indicators li,
+   		div.carousel .carousel-indicators .active
+		{
+			width:9px !important;
+			height:9px !important;
+		}
+		
+		.carousel-indicators{
+		
+			bottom:-5px !important;
+		}
+		
+
+}

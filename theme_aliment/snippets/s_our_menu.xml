@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="s_our_menu" name="Our Menu Snippet">
+			<section class="container">
+				<hr class="vertical-space4" />
+				<div class="w-divider6">
+					<i class="colora  fa fa-pagelines"></i>
+					<h3>
+						<span class="colorf spl" style=" border-bottom: 1px solid; ">Menu</span>
+						<span class="spr">CHEF SELECTION</span>
+					</h3>
+				</div>
+				<hr class="vertical-space3" />
+				<div class="col-md-4">
+					<div class="oe_structure">
+						<section class="s_product_carousel">
+							<div class="container">
+								<div class="js_get_objects" data-loading="true"
+									data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+									data-object_name="product.template" data-custom_controller="1"
+									data-objects_limit="3" data-objects_in_row="3"
+									data-objects_in_slide="1" />
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="oe_structure">
+						<section class="s_product_carousel">
+							<div class="container">
+								<div class="js_get_objects" data-loading="true"
+									data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+									data-object_name="product.template" data-custom_controller="1"
+									data-objects_limit="3" data-objects_in_row="3"
+									data-objects_in_slide="1" />
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="oe_structure">
+						<section class="s_product_carousel">
+							<div class="container">
+								<div class="js_get_objects" data-loading="true"
+									data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+									data-object_name="product.template" data-custom_controller="1"
+									data-objects_limit="3" data-objects_in_row="3"
+									data-objects_in_slide="1" />
+							</div>
+						</section>
+					</div>
+				</div>
+				<hr class="vertical-space3" />
+				<div class="text-center">
+					<a href="#" class="btn btn-primary">VIEW THE FULL MENU</a>
+				</div>
+				<hr class="vertical-space3" />
+			</section>
+		</template>
+	</data>
+</openerp>

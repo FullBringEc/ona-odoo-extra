@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="disable_search_box_products" inherit_id="website_sale.products"
+			name="Disable Search Box Products View" priority="300">
+			<xpath expr="//div[@class='products_pager']" position="replace">
+			</xpath>
+
+			<xpath expr="//div[@id='products_grid']/table" position="inside">
+				<div class="products_pager">
+					<div class="row" style="width: 100%;">
+						<t t-call="website.pager" />
+					</div>
+				</div>
+			</xpath>
+		</template>
+
+		<template id="disable_search_box_product" inherit_id="website_sale.product"
+			name="Disable Search Box Product View">
+			<xpath expr="//div[@class='col-sm-3 mb8']/t[1]" position="replace">
+			</xpath>
+			<xpath expr="//div[@class='col-sm-2 text-right']/t[1]"
+				position="replace">
+			</xpath>
+		</template>
+		
+		<template id="website_sale.recommended_products" inherit_id="website_sale.product"
+			customize_show="True" active="True" name="Suggested Products">
+			<xpath expr="//div[@id='product_full_description']" position="after">
+				<div class="container mt32" t-if="product.alternative_product_ids">
+					<h3>Suggested alternatives:</h3>
+					<div class='row mt16' >
+						<div class="col-md-12">
+							<t t-foreach="product.alternative_product_ids" t-as="product">
+								<div class='col-md-2 '>
+									<div class='mt16 text-center' style="height: 100%;">
+										<div t-field="product.image"
+											t-field-options='{"widget": "image", "class": " o_alternative_product" }' />
+										<h6 style="overflow: hidden;height: 48px;">
+											<a t-attf-href="/shop/product/#{ slug(product) }" style="display: block">
+												<span t-att-title='product.name' t-field='product.name'
+													style="display: block;" />
+											</a>
+										</h6>
+
+
+										<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+											class="product_price" t-if="product.product_variant_ids">
+											<b class="text-center">
+												<t
+													t-if="(compute_currency(product.lst_price) - product.price) &gt; 0.1">
+													<del class="text-danger mr8" style="white-space: nowrap;"
+														t-field="product.lst_price"
+														t-field-options='{
+									                  "widget": "monetary",
+									                  "from_currency": "product.company_id.currency_id",
+													  "display_currency": "website.currency_id"									                }' />
+												</t>
+												<span t-field="product.price" style="white-space: nowrap;"
+													t-field-options='{
+									                   "widget": "monetary",
+													   "display_currency": "website.currency_id"}'>
+												</span>
+												<span itemprop="price" style="display:none;" t-esc="product.price" />
+												<span itemprop="priceCurrency" style="display:none;"
+													t-esc="website.currency_id.name" />
+											</b>
+										</div>
+									</div>
+								</div>
+							</t>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</template>
+
+
+		<!-- this is all product page -->
+		<template id="theme_products_grid" name="Theme Products Grid View"
+			inherit_id="website_sale.products" customize_show="True" active="True">
+			<xpath expr="//div[@id='products_grid']/table" position="replace">
+					<table></table>
+					<tr t-ignore="true">
+						<td t-foreach="range(0,rows)" t-as="row" t-attf-width="#{100/rows}%"></td>
+					</tr>
+					<div t-foreach="bins" t-as="tr_product" class="theme-products-grid">
+						<t t-foreach="tr_product" t-as="td_product">
+							<t t-if="td_product">
+								<t t-set="product" t-value="td_product['product']" />
+								<div
+									t-attf-class="col-md-4 mt32 pad12 oe_product oe_grid shadow oe-height-#{td_product['y']*4} #{ td_product['class'] }">
+									<div class="oe_product_cart" t-att-data-publish="product.website_published and 'on' or 'off'">
+										<t t-call="website_sale.products_item" />
+									</div>
+								</div>
+							</t>
+							<td t-if="not td_product" class="oe-height-2" />
+						</t>
+					</div>
+			</xpath>
+		</template>
+		<!-- end here -->
+
+		<!-- this is placing every product on single page -->
+		<template id="website_sale.products_item" name="Products item">
+			<form action="/shop/cart/update" method="post">
+				<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+				<div itemscope="itemscope" itemtype="http://schema.org/Product">
+					<div class="ribbon-wrapper">
+						<div class="ribbon btn btn-danger">Sale</div>
+					</div>
+					<div class="oe_product_image">
+						<a itemprop="url"
+							t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))">
+							<span itemprop="image" t-field="product.image"
+								t-field-options='{"widget": "image" #{None if product_image_big else ", \"resize\": \"300x300\""}}'
+								t-att-alt="product.name" />
+						</a>
+					</div>
+					<t t-if="show_publish">
+						<div id="website_published_button" class=""
+							groups="base.group_sale_manager">
+							<t t-call="website.publish_management">
+								<t t-set="object" t-value="product" />
+								<t t-set="publish_edit" t-value="True" />
+								<t t-set="action" t-value="'product.product_template_action'" />
+							</t>
+						</div>
+					</t>
+					<section class="owl-prize-rating">
+						<hr />
+						<h6 style="height: 36px;overflow: hidden;">
+							<strong>
+								<a itemprop="name"
+									t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))"
+									t-field="product.name" />
+							</strong>
+						</h6>
+						<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+							class="product_price" t-if="product.product_variant_ids">
+							<b class="text-center">
+								<t
+									t-if="(compute_currency(product.lst_price) - product.price) &gt; 0.1">
+									<del class="text-danger mr8" style="white-space: nowrap;"
+										t-field="product.lst_price"
+										t-field-options='{
+								                  "widget": "monetary",
+								                  "from_currency": "product.company_id.currency_id",
+								                  "display_currency": "website.currency_id"
+								                }' />
+								</t>
+								<span t-field="product.price" style="white-space: nowrap;"
+									t-field-options='{
+								                   "widget": "monetary",
+								                   "display_currency": "website.currency_id"
+								               }'>
+								</span>
+								<span itemprop="price" style="display:none;" t-esc="product.price" />
+								<span itemprop="priceCurrency" style="display:none;"
+									t-esc="website.currency_id.name" />
+							</b>
+						</div>
+					</section>
+				</div>
+			</form>
+		</template>
+		<!-- this is placing every product on single page end -->
+
+		<!-- this is for all product add to cart box spaceing -->
+		<template id="website_sale.products_add_to_cart" inherit_id="website_sale.products_item"
+			active="True" customize_show="True" name="Add to Cart">
+			<xpath expr="//div[@class='product_price']" position="inside">
+				<input name="product_id" t-att-value="product.product_variant_ids[0].id"
+					type="hidden" />
+				<t t-if="len(product.product_variant_ids) == 1">
+					<a class="btn btn-primary btn-xs a-submit" style="margin-left: 12px;">
+						<span class="fa fa-shopping-cart" />
+					</a>
+				</t>
+				<t t-if="len(product.product_variant_ids) &gt; 1">
+					<a class="btn btn-default btn-xs" style="margin-left: 12px;"
+						t-att-href="keep('/shop/product/%s' % slug(product), page=(pager['page']['num'] if pager['page']['num']>1 else None))">
+						<span class="fa fa-shopping-cart" />
+					</a>
+				</t>
+			</xpath>
+		</template>
+
+		<!-- this is for all product add to cart box spaceing end -->
+
+
+		<template id="website_sale.product_price">
+			<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+				class="product_price">
+				<h4 class="oe_price_h4 css_editable_mode_hidden">
+					<span class="text-danger oe_default_price" style="text-decoration: line-through; white-space:"
+						t-field="product.lst_price"
+						t-field-options='{"widget": "monetary","from_currency": "product.company_id.currency_id","display_currency": "website.currency_id"}' />
+					<b lass="oe_price" style="white-space: nowrap;" t-field="product.price"
+						t-field-options='{"widget": "monetary","display_currency": "website.currency_id"}' />
+					<span itemprop="price" style="display:none;  margin-right: 11px;"
+						t-esc="product.price" />
+					<span itemprop="priceCurrency" style="display:none;"
+						t-esc="website.currency_id.name" />
+				</h4>
+				<h4 class="css_non_editable_mode_hidden">
+					<span t-field="product.lst_price"
+						t-field-options='{"widget": "monetary","display_currency": "website.pricelist_id.currency_id"}' />
+				</h4>
+				<h4 class="hidden oe_not_available bg-warning">Product not available</h4>
+			</div>
+		</template>
+	</data>
+</openerp>

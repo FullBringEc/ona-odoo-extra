@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<template id="product_breadcrumb" inherit_id="website_sale.product"
+			name="Product Breadcrumb size">
+			<xpath
+				expr="//section[@id='product_detail']/div[1]/div[@class='col-sm-4']"
+				position="attributes">
+				<attribute name="class">col-sm-6</attribute>
+			</xpath>
+		</template>
+
+		<template id="website_product_content_block_73lines.product_half_section"
+			inherit_id="website_sale.product" name="Show Product Half Section Block"
+			priority="100" active="False" customize_show="True">
+			<xpath expr="//div[@class='col-sm-7 col-md-7 col-lg-7']"
+				position="attributes">
+				<attribute name="class">col-sm-4 col-md-4 col-lg-4</attribute>
+				<attribute name="id">product_image_section</attribute>
+			</xpath>
+			<xpath expr="//div[@class='col-sm-5 col-md-5 col-lg-4 col-lg-offset-1']"
+				position="attributes">
+				<attribute name="class">col-sm-4 col-md-4 col-lg-4</attribute>
+				<attribute name="id">product_price_section</attribute>
+			</xpath>
+		</template>
+
+		<template
+			id="website_product_content_block_73lines.product_image_template"
+			inherit_id="website_product_content_block_73lines.product_half_section"
+			name="Show Product Side Block" active="False" customize_show="True">
+
+			<xpath expr="//div[@id='product_price_section']" position="after">
+				<div class="col-sm-4 col-md-4 col-lg-4">
+					<div class="oe_structure">
+						<section
+							class="s_ecommerce_terms homepage-bar s_three_boxes_with_icon mt32 mb32">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12 feature-box mt8 ">
+										<div class="col-md-2 mt8 mb8">
+											<span class="fa fa-home fa-1x img-circle bg-primary"
+												 />
+										</div>
+										<div class="col-md-10 mt8 mb8">
+											<h4>FREE SHIPPING &amp;amp; RETURN</h4>
+											<p>Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+									<div class="col-md-12 feature-box mt8 ">
+										<div class="col-md-2 mt8 mb8">
+											<span class="fa fa-check fa-1x img-circle bg-primary" />
+										</div>
+										<div class="col-md-10 mt8 mb8">
+											<h4>FREE SHIPPING &amp;amp; RETURN</h4>
+											<p>Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+									<div class="col-md-12 feature-box mt8 ">
+										<div class="col-md-2 mt8 mb8">
+											<span class="fa fa-inr fa-1x img-circle bg-primary" />
+										</div>
+										<div class="col-md-10 mt8 mb8">
+											<h4>MONEY BACK GUARANTEE</h4>
+											<p>Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+									<div class="col-md-12 feature-box mt8 ">
+										<div class="col-md-2 mt8 mb8">
+											<span class="fa fa-life-ring fa-1x img-circle bg-primary"
+												 />
+										</div>
+										<div class="col-md-10 mt8 mb8">
+											<h4>ONLINE SUPPORT 24/7</h4>
+											<p>Free shipping on all orders over $99.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="s_product_carousel">
+							<div class="container">
+								<div class="js_get_objects" data-loading="true"
+									data-template="snippet_product_carousel_73lines.product_list_template_mini"
+									data-object_name="product.template" data-custom_controller="1"
+									data-objects_limit="8" data-filter_by_filter_id="12"
+									data-objects_in_row="2" data-objects_in_slide="1" />
+							</div>
+						</section>
+					</div>
+				</div>
+			</xpath>
+		</template>
+	</data>
+</openerp>

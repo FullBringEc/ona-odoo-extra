@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="snippet_product_carousel_73lines.new_products_item"
+			name="Products item">
+			<form action="/shop/cart/update" method="post">
+				<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+				<div itemscope="itemscope" itemtype="http://schema.org/Product" class="owl-item-custom">
+					<div class="oe_product_image">
+						<a itemprop="url" t-att-href="'/shop/product/%s' % slug(product)">
+							<span itemprop="image" t-field="product.image"
+								t-field-options='{"widget": "image" #{None if product_image_big else ", \"resize\": \"300x300\""}}'
+								t-att-alt="product.name" />
+						</a>
+					</div>
+					<t t-if="show_publish">
+						<div id="website_published_button" class=""
+							groups="base.group_sale_manager">
+							<t t-call="website.publish_management">
+								<t t-set="object" t-value="product" />
+								<t t-set="publish_edit" t-value="True" />
+								<t t-set="action" t-value="'product.product_template_action'" />
+							</t>
+						</div>
+					</t>
+					<section class="owl-prize-rating">
+						<h6 style="height: 19px;overflow: hidden;">
+							<strong>
+								<a itemprop="name" t-att-href="'/shop/product/%s' % slug(product)"
+									t-field="product.name" />
+							</strong>
+						</h6>
+						<div class="pull-right">
+							<t t-call="rating.rating_card">
+								<t t-set="rating_stat" t-value="get_rating_stat(product)" />
+								<t t-set="max_rate" t-value="5" />
+								<t t-set="min_rate" t-value="1" />
+							</t>
+						</div>
+						<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+							class="product_price" t-if="product.product_variant_ids">
+							<b style="font-size: 17px;">
+								<t
+									t-if="(compute_currency(product.lst_price) - product.price) &gt; 0.1">
+									<del class="text-danger mr8" style="white-space: nowrap;"
+										t-field="product.lst_price"
+										t-field-options='{
+		                  "widget": "monetary",
+		                  "from_currency": "product.company_id.currency_id",
+		                  "display_currency": "website.currency_id"
+		                }' />
+								</t>
+								<span t-field="product.price" style="white-space: nowrap;"
+									t-field-options='{
+		                   "widget": "monetary",
+		                   "display_currency": "website.currency_id"
+		               }'>
+								</span>
+								<span itemprop="price" style="display:none;" t-esc="product.price" />
+								<span itemprop="priceCurrency" style="display:none;"
+									t-esc="website.currency_id.name" />
+							</b>
+						</div>
+					</section>
+				</div>
+			</form>
+		</template>
+	</data>
+</openerp>

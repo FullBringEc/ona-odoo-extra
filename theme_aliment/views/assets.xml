@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+
+	<!-- Jump to website after theme installation ========================================================================== -->
+
+	<data noupdate="1">
+		<record id="base.open_menu" model="ir.actions.todo">
+			<field name="action_id" ref="website.action_website" />
+			<field name="state">open</field>
+		</record>
+	</data>
+
+	<template id="theme_aliment_snippets" inherit_id="website.snippets">
+		<xpath expr="//div[@id='snippet_structure']" position="inside">
+			<div class="o_panel_body">
+				<t t-snippet="theme_aliment.s_state_counter" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_parallax_two" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_parallax_one" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_footer_one" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_aliment_banner" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_our_menu" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+				<t t-snippet="theme_aliment.s_our_usp" t-thumbnail="/theme_aliment/static/img/s-icon.png" />
+			</div>
+		</xpath>
+	</template>
+	<data>
+		<!-- LESS ========================================================================== -->
+
+
+		<template id="demo_frontend_style" name="Theme Shop style"
+			inherit_id="website.assets_frontend" active="True" priority="1">
+			<xpath expr="." position="inside">
+				<link href="/theme_aliment/static/less/animate.less" rel="stylesheet"
+					type="text/less" />
+				<link href="/theme_aliment/static/less/carousel_banner.less"
+					rel="stylesheet" type="text/less" />
+				<link href="/theme_aliment/static/less/trans_navbar.less" rel="stylesheet"
+					type="text/less" />
+				<link href="/theme_aliment/static/less/custom.less" rel="stylesheet"
+					type="text/less" />
+				<link href="/theme_aliment/static/less/s_banner.less" rel="stylesheet"
+					type="text/less" />
+				<link href="/theme_aliment/static/less/snippet_accordian.less"
+					rel="stylesheet" type="text/less" />
+				<link href='https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff'
+					rel='stylesheet' type='text/css' />
+				<link
+					href="/theme_aliment/static/less/options/colors/aliment_main_colors.less"
+					type="text/less" rel="stylesheet" />
+				<link
+					href="/theme_aliment/static/less/options/colors/customize_modal.less"
+					type="text/less" rel="stylesheet" />
+				<link href='https://fonts.googleapis.com/css?family=Great+Vibes'
+					rel='stylesheet' type='text/css' />
+				<link href='https://fonts.googleapis.com/css?family=Poiret+One'
+					rel='stylesheet' type='text/css' />
+
+				<script type="text/javascript" src="/theme_aliment/static/js/state.js"></script>
+				<script type="text/javascript" src="/theme_aliment/static/js/navbarfix.js"></script>
+				<script type="text/javascript" src="/theme_aliment/static/js/nicescroll.js"></script>
+			</xpath>
+		</template>
+
+		<template id="website_customize_model_73lines.footer_dark"
+			name="footer_dark" inherit_id="website.assets_frontend" active="True"
+			customize_show="False">
+			<xpath expr="." position="inside">
+				<link href="/theme_aliment/static/less/options/layouts/footer_dark.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+
+		<template id="website_sale.products_list_view" inherit_id="website_sale.products"
+			active="False" customize_show="False" name="List View">
+
+		</template>
+
+		<!-- on/off templates -->
+
+		<!-- Color Scheme Assets -->
+
+		<template id="colors_aliment" name="option_colors_aliment"
+			inherit_id="website.assets_frontend" active="True" customize_show="True">
+			<xpath expr="." position="inside">
+				<link
+					href="/theme_aliment/static/less/options/colors/colors_aliment.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+
+
+		<template id="website_customize_model_73lines.header_white"
+			name="header_white" inherit_id="website.assets_frontend" active="False"
+			customize_show="False">
+			<xpath expr="." position="inside">
+				<link
+					href="/website_customize_model_73lines/static/less/options/layouts/header_white.less"
+					rel="stylesheet" type="text/less" />
+			</xpath>
+		</template>
+
+	</data>
+</openerp>

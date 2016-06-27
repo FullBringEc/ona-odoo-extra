@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="s_our_usp" name="Our USP Snippet">
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="w-divider6">
+							<i class="colora  li_diamond"></i>
+							<h3>
+								<span class="colorf spl" style="margin-top:52px; border-bottom: 1px solid; ">Kitchen</span>
+								<span class="spr">IN NEW YORK</span>
+							</h3>
+						</div>
+						<hr class="vertical-space2" />
+						<div class="col-md-4">
+							<article class="icon-box6">
+								<i class="fa fa-pagelines"></i>
+								<h4>MEALS</h4>
+								<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore in tandem with innovative technology magna
+								</p>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="icon-box6">
+								<i class="fa fa-cutlery"></i>
+								<h4>RECEPTION</h4>
+								<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore in tandem with innovative technology magna
+								</p>
+							</article>
+						</div>
+						<div class="col-md-4">
+							<article class="icon-box6">
+								<i class="fa fa-pagelines"></i>
+								<h4>DELIVERY</h4>
+								<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore in tandem with innovative technology magna
+								</p>
+							</article>
+						</div>
+						<hr class="vertical-space2" />
+					</div>
+				</div>
+			</section>
+		</template>
+	</data>
+</openerp>

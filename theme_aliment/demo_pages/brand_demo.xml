@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+   <data noupdate="1">
+    	
+    	<record id="product_brand_1" model="product.brand">
+            <field name="name">Adidas</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo1.png"/>
+        </record>
+        
+         <record id="product_brand_2" model="product.brand">
+            <field name="name">Polo</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo2.png"/>
+        </record>
+         
+         <record id="product_brand_3" model="product.brand">
+            <field name="name">Ray Ban</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo3.png"/>
+        </record>
+        
+         <record id="product_brand_4" model="product.brand">
+            <field name="name">Reebok</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo4.png"/>
+        </record>
+        
+        <record id="product_brand_5" model="product.brand">
+            <field name="name">American Swan</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo5.png"/>
+        </record>
+        
+          <record id="product_brand_6" model="product.brand">
+            <field name="name">Diesel</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo6.png"/>
+        </record>
+        
+         <record id="product_brand_7" model="product.brand">
+            <field name="name">Lee</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo1.png"/>
+        </record>
+        
+        <record id="product_brand_8" model="product.brand">
+            <field name="name">Fastrack</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo2.png"/>
+        </record>
+        
+         <record id="product_brand_9" model="product.brand">
+            <field name="name">Lotto</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo3.png"/>
+        </record>
+        
+        <record id="product_brand_10" model="product.brand">
+            <field name="name">Puma</field>
+            <field name="brand_image" type="base64" file="theme_aliment/static/img/b-logo4.png"/>
+        </record>
+    </data>
+</openerp>

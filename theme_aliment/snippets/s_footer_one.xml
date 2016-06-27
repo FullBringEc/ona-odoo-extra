@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+
+		<template id="s_footer_one" name="Footer Design One">
+			<section class="container footer-in">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="widget">
+							<h5 class="subtitle">ABOUT aLIMENT</h5>
+							<div class="textwidget">
+								<p>Here we try to share our vision about food quality, our
+									mission about customer’s satisfaction and introducing
+									services that we provide for each one of you. Making a place
+									for you and your friends to spend a time to remember is a
+									primary purpose. Find out about Aliment’s awesome food menu
+									and reserve a table to taste. Hope to see you soon.
+								</p>
+								<p>
+									<strong style="color:#eee">
+										Address:
+										<span t-field="res_company.street"></span>
+										,
+										<span t-field="res_company.country_id"></span>
+									</strong>
+									<br />
+									<strong style="color:#eee">
+										Tel:
+										<span t-field="res_company.phone"></span>
+									</strong>
+
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h5 class="subtitle">Newsletter</h5>
+							<div class="widget-subscribe-form">
+								<div id="container_form_news">
+									<p>Get an email of every new post</p>
+									<div class="input-group js_subscribe hidden" data-list-id="1"
+										data-subscribe="off">
+										<input type="email" name="email"
+											class="js_subscribe_email form-control" placeholder="your email..." />
+										<div class="input-group-btn">
+											<a href="#"
+												class="btn btn-primary js_subscribe_btn o_default_snippet_text">Subscribe</a>
+											<a href="#"
+												class="btn btn-success js_subscribed_btn hidden o_default_snippet_text"
+												disabled="disabled">Thanks</a>
+										</div>
+										<div class="alert alert-success hidden o_default_snippet_text">Thanks for your subscription!</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="widget">
+							<div class="textwidget">
+								<div class="vertical-space1">
+									<t t-call="website.language_selector" />
+								</div>
+							</div>
+						</div>
+						<div class="widget">
+							<div class="socialfollow">
+								<a t-att-href="website.social_twitter" t-if="website.social_twitter">
+									<i class="fa fa-twitter" />
+								</a>
+								<a t-att-href="website.social_facebook" t-if="website.social_facebook">
+									<i class="fa fa-facebook-square" />
+								</a>
+								<a t-att-href="website.social_youtube" t-if="website.social_youtube">
+									<i class="fa fa-youtube-play" />
+								</a>
+								<a t-att-href="website.social_googleplus" t-if="website.social_googleplus"
+									rel="publisher">
+									<i class="fa fa-google-plus-square" />
+								</a>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="widget">
+							<div class="textwidget">
+								<div class="vertical-space1"></div>
+								<div class="text-center copyright-txt ">© 2016 ALIMENT ALL RIGHTS RESERVED.</div>
+								<div class="vertical-space1"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="widget">
+							<h5 class="subtitle">Gallery</h5>
+							<div class="gallery-feed">
+								<ul>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img1.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img2.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img3.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img4.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img5.jpg" />
+										</a>
+									</li>
+									<li>
+										<a href="#" target="_blank">
+											<img alt="footer image" src="/theme_aliment/static/img/footer_img6.jpg" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+	</data>
+</openerp>

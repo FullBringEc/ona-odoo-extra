@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="s_parallax_one" name="Parallax Style One">
+			<section class="parallax-sec  dark  blox"
+				style="background: url(&quot;/theme_aliment/static/img/blx08.jpg&quot;);background-attachment: fixed;">
+				<div class="container">
+					<hr class="vertical-space3" />
+					<hr class="vertical-space5" />
+					<hr class="vertical-space1" />
+					<div class="w-divider6">
+						<i class="colora fa fa-pagelines"></i>
+						<h3>
+							<span class="colorf spl" style=" border-bottom: 1px solid; ">Ingredients</span>
+							<span class="spr">FRESH AND HEALTHY</span>
+						</h3>
+					</div>
+					<hr class="vertical-space1" />
+					<h4 style="text-align: center;">
+						WE USE FRESH AND HEALTHY
+						<br />
+						INGREDIENTS FOR OUR FOODS
+					</h4>
+					<hr class="vertical-space2" />
+					<hr class="vertical-space5" />
+					<hr class="vertical-space3" />
+				</div>
+			</section>
+		</template>
+	</data>
+</openerp>

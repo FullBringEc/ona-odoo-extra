@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<template name="aliment demo homepage" id="website.homepage"
+			page="True">
+			<t t-call="website.layout">
+				<div id="" class="oe_structure">
+					<div id="myCarousel1454476124746" class="carousel slide s_banner oe_custom_bg"
+						data-interval="10000" style=" overflow: hidden;">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel1454476124746" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#myCarousel1454476124746" data-slide-to="1"
+								class=""></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item oe_img_bg oe_custom_bg active">
+								<img class="img img-responsive" src="/theme_aliment/static/img/food-banner-1.jpg"
+									style="position:relative;width:100%;" />
+								<div class="container">
+									<div class="row content hidden-xs">
+
+										<div class="nivo-caption">
+											<div class="timethai"
+												style=" 
+											position:absolute;
+											top:0;
+											left:0;
+											background-color:rgba(152, 122, 116, 0.82);
+											height:5px;
+											-webkit-animation: myfirst 5000ms ease-in-out;
+											-moz-animation: myfirst 5000ms ease-in-out;
+											-ms-animation: myfirst 5000ms ease-in-out;
+											animation: myfirst 5000ms ease-in-out;">
+											</div>
+											<div class="banner7-content slider-2">
+												<div class="bannerslideshow ">
+													<h1 class="title1">
+														<span>The Real SPICY MASALAS</span>
+													</h1>
+													<h2 class="title2">
+														<span>THE REAL TASTE IN YOUR HANDS</span>
+													</h2>
+													<div class="banner7-readmore">
+														<a href="#" title="Read more">Read more</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br />
+									</div>
+								</div>
+							</div>
+
+
+							<div class="item oe_img_bg oe_custom_bg">
+								<img class="img img-responsive" src="/theme_aliment/static/img/food-banner-2.jpg"
+									style="position:relative;width:100%;" />
+								<div class="container">
+									<div class="row content hidden-xs">
+										<div class="nivo-caption">
+											<div class="timethai"
+												style=" 
+													position:absolute;
+													top:0;
+													left:0;
+													background-color:rgba(152, 122, 116, 0.82);
+													height:5px;
+													-webkit-animation: myfirst 5000ms ease-in-out;
+													-moz-animation: myfirst 5000ms ease-in-out;
+													-ms-animation: myfirst 5000ms ease-in-out;
+													animation: myfirst 5000ms ease-in-out;">
+											</div>
+											<div class="banner7-content slider-2">
+												<div class="bannerslideshow ">
+													<h1 class="title1">
+														<span>Delicious FRESH FOODS</span>
+													</h1>
+													<h2 class="title2">
+														<span>THE REAL TASTE IN YOUR HANDS</span>
+													</h2>
+													<div class="banner7-readmore">
+														<a href="#" title="Read more">Read more</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<section>
+						<div class="container">
+							<div class="row">
+								<div class="w-divider6">
+									<i class="colora  li_diamond"></i>
+									<h3>
+										<span class="colorf spl" style="margin-top:52px; border-bottom: 1px solid; ">Kitchen</span>
+										<span class="spr">IN NEW YORK</span>
+									</h3>
+								</div>
+								<hr class="vertical-space2" />
+								<div class="col-md-4">
+									<article class="icon-box6">
+										<i class="fa fa-pagelines"></i>
+										<h4>MEALS</h4>
+										<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+											labore et dolore in tandem with innovative technology magna
+										</p>
+									</article>
+								</div>
+								<div class="col-md-4">
+									<article class="icon-box6">
+										<i class="fa fa-cutlery"></i>
+										<h4>RECEPTION</h4>
+										<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+											labore et dolore in tandem with innovative technology magna
+										</p>
+									</article>
+								</div>
+								<div class="col-md-4">
+									<article class="icon-box6">
+										<i class="fa fa-pagelines"></i>
+										<h4>DELIVERY</h4>
+										<p>adipisicing elit, sed do eiusmod tempor incididunt ut
+											labore et dolore in tandem with innovative technology magna
+										</p>
+									</article>
+								</div>
+								<hr class="vertical-space2" />
+							</div>
+						</div>
+					</section>
+
+					<section class="s_product_category_carousel mb48">
+						<div class="container">
+							<div class="js_get_objects" data-loading="true"
+								data-template="snippet_product_category_carousel_73lines.product_category_list_template_header"
+								data-object_name="product.public.category"
+								data-filter_by_filter_id="20" data-objects_in_slide="5"
+								data-objects_limit="5" />
+						</div>
+					</section>
+					
+					<section class="parallax-sec  dark  blox"
+						style="background: url(&quot;/theme_aliment/static/img/blx08.jpg&quot;);background-attachment: fixed;">
+						<div class="container">
+							<hr class="vertical-space3" />
+							<hr class="vertical-space5" />
+							<hr class="vertical-space1" />
+							<div class="w-divider6">
+								<i class="colora fa fa-pagelines"></i>
+								<h3>
+									<span class="colorf spl" style=" border-bottom: 1px solid; ">Ingredients</span>
+									<span class="spr">FRESH AND HEALTHY</span>
+								</h3>
+							</div>
+							<hr class="vertical-space1" />
+							<h4 style="text-align: center;">
+								WE USE FRESH AND HEALTHY
+								<br />
+								INGREDIENTS FOR OUR FOODS
+							</h4>
+							<hr class="vertical-space2" />
+							<hr class="vertical-space5" />
+							<hr class="vertical-space3" />
+						</div>
+					</section>
+
+
+					<section class="container">
+						<hr class="vertical-space4" />
+						<div class="w-divider6">
+							<i class="colora  fa fa-pagelines"></i>
+							<h3>
+								<span class="colorf spl" style=" border-bottom: 1px solid; ">Menu</span>
+								<span class="spr">CHEF SELECTION</span>
+							</h3>
+						</div>
+						<hr class="vertical-space3" />
+						<div class="col-md-4">
+							<div class="oe_structure">
+								<section class="s_product_carousel">
+									<div class="container">
+										<div class="js_get_objects" data-loading="true"
+											data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+											data-object_name="product.template" data-custom_controller="1"
+											data-objects_limit="3" data-objects_in_row="3"
+											data-objects_in_slide="1" />
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="oe_structure">
+								<section class="s_product_carousel">
+									<div class="container">
+										<div class="js_get_objects" data-loading="true"
+											data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+											data-object_name="product.template" data-custom_controller="1"
+											data-objects_limit="3" data-objects_in_row="3"
+											data-objects_in_slide="1" />
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="oe_structure">
+								<section class="s_product_carousel">
+									<div class="container">
+										<div class="js_get_objects" data-loading="true"
+											data-template="snippet_product_carousel_73lines.product_list_template_mini_no_header"
+											data-object_name="product.template" data-custom_controller="1"
+											data-objects_limit="3" data-objects_in_row="3"
+											data-objects_in_slide="1" />
+									</div>
+								</section>
+							</div>
+						</div>
+						<hr class="vertical-space3" />
+						<div class="text-center">
+							<a href="#" class="btn btn-primary">VIEW THE FULL MENU</a>
+						</div>
+						<hr class="vertical-space3" />
+					</section>
+
+
+					<section class="parallax-sec  dark  blox    "
+						style="background: url(&quot;/theme_aliment/static/img/blx09.jpg&quot;);background-attachment: fixed;">
+						<div class="container">
+							<hr class="vertical-space3" />
+							<hr class="vertical-space5" />
+							<hr class="vertical-space1" />
+							<div class="w-divider6">
+								<i class="colora  fa fa-heart"></i>
+								<h3>
+									<span class="colorf spl" style=" border-bottom: 1px solid; ">Experience</span>
+									<span class="spr">SUPERB SERVICE</span>
+								</h3>
+							</div>
+							<hr class="vertical-space3" />
+							<div class="text-center">
+								<a href="#" class="btn btn-primary">
+									BOOK A TABLE NOW
+								</a>
+							</div>
+							<hr class="vertical-space2" />
+							<hr class="vertical-space5" />
+							<hr class="vertical-space3" />
+						</div>
+					</section>
+
+
+					<section class="container" id="state-counter">
+						<hr class="vertical-space3" />
+						<div class="w-divider6">
+							<i class="colora fa fa-leaf"></i>
+							<h3>
+								<span class="colorf spl" style=" border-bottom: 1px solid; ">Facts</span>
+								<span class="spr">ABOUT ALIMENT</span>
+							</h3>
+						</div>
+						<hr class="vertical-space2" />
+						<div class="wpb_text_column wpb_content_element ">
+							<p style="text-align: center;">
+								Here we try to share our vision about food quality, our
+								mission
+								about customer’s satisfaction
+								<br />
+								and introducing services that we provide for you.
+							</p>
+						</div>
+						<hr class="vertical-space2" />
+						<div class="col-sm-4">
+							<div class="s-counter max-counter" data-effecttype="counter"
+								data-counter="136">
+
+								<i class="icon-counter fa fa-heart"></i>
+								<span class="max-count">136</span>
+								<h5>Unique Meals in Menu</h5>
+
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="s-counter  max-counter" data-effecttype="counter"
+								data-counter="999">
+								<i class="icon-counter fa fa-thumbs-up"></i>
+								<span class="max-count">999</span>
+								<h5>Satisfied Customers on facebook</h5>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="s-counter max-counter " data-effecttype="counter"
+								data-counter="18">
+								<i class="icon-counter fa fa-leaf"></i>
+								<span class="max-count">18</span>
+								<h5>Mew Recipe per Month</h5>
+							</div>
+						</div>
+						<hr class="vertical-space1" />
+					</section>
+				</div>
+			</t>
+		</template>
+	</data>
+</openerp>
+	

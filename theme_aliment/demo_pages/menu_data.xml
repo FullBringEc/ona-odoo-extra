@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+	<data>
+		<record id="menu_fashion" model="website.menu">
+			<field name="name">Menu</field>
+			<field name="url">#</field>
+			<field name="parent_id" ref="website.main_menu" />
+			<field name="sequence" type="int">40</field>
+			<field name="menu_size">fw</field>
+			<field name="submenu_view"><![CDATA[
+			<div class="row">
+							<div class="col-md-12 ">
+								<div class="col-md-6">
+									<div class="col-md-4 ">
+										<ul class="pad0">
+											<li>
+												<a href="#">
+													<span>Beverages</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#">
+															<span>Big Gulp</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Apple Juice</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Tea</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Coffee</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-4 ">
+										<ul class="pad0">
+											<li>
+												<a href="#">
+													<span>Pizza</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#">
+															<span>Cheese Pizza</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Chicken Pizza</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Tomato Pizza</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Paneer Pizza</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-4 ">
+										<ul class="pad0">
+											<li>
+												<a href="#">
+													<span>Toppings</span>
+												</a>
+												<ul>
+													<li>
+														<a href="#">
+															<span>Nibbler Buns</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>American Cheese</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Asian Slaw</span>
+														</a>
+													</li>
+													<li>
+														<a href="#">
+															<span>Cake Syrup</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+									<div class="col-md-12" style="padding: 0px;">
+										<div class="col-md-4 ">
+											<ul class="pad0">
+												<li>
+													<a href="#">
+														<span>Food</span>
+													</a>
+													<ul>
+														<li>
+															<a href="#">
+																<span>Maxican</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Chiness</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Indian</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Thai</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="col-md-4 ">
+											<ul class="pad0">
+												<li>
+													<a href="#">
+														<span>Soup</span>
+													</a>
+													<ul>
+														<li>
+															<a href="#">
+																<span>Chicken Soup</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Tomato Soup</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>vegetables Soup</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Taiwanese Soup</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+										<div class="col-md-4 ">
+											<ul class="pad0">
+												<li>
+													<a href="#">
+														<span>Stater</span>
+													</a>
+													<ul>
+														<li>
+															<a href="#">
+																<span>Green Peas</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Harabhara Kabab</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Punjabi Samosa</span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<span>Paneer Tikka</span>
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 ">
+									<div class="oe_structure">
+									 <div class="col-md-6 ">
+									 <div class="zoom-image"> 
+									 	<a class="banner-img" title="banner" href="#"> 
+									 		<img class="img-responsive mb16 img-banner-lazyloaded" alt="" src="/theme_aliment/static/img/img-cate1.jpg">
+									 	</a>
+									 </div>
+										<div class="zoom-image"> 
+									 	<a class="banner-img" title="banner" href="#"> 	
+											<img class="img img-responsive mb16 img-banner-lazyloaded" src="/theme_aliment/static/img/img-cate2.jpg"></img>
+									</a>
+									 </div>
+									</div>
+									 <div class="col-md-6 ">
+									 <div class="zoom-image"> 
+									 	<a class="banner-img" title="banner" href="#"> 	
+											<img class="img img-responsive mb16 img-banner-lazyloaded" src="/theme_aliment/static/img/img-cate3.jpg"></img>
+												</a>
+									 </div>
+									<div class="zoom-image"> 
+									 	<a class="banner-img" title="banner" href="#"> 	
+											<img class="img img-responsive mb16 img-banner-lazyloaded" src="/theme_aliment/static/img/img-cate4.jpg"></img>
+										</a>
+									 </div>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+			 ]]>
+
+			</field>
+		</record>
+	</data>
+</openerp>

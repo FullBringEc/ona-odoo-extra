@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<template id="s_parallax_two" name="Parallax Two Snippet">
+			<section class="parallax-sec  dark  blox    "
+				style="background: url(&quot;/theme_aliment/static/img/blx09.jpg&quot;);background-attachment: fixed;">
+				<div class="container">
+					<hr class="vertical-space3" />
+					<hr class="vertical-space5" />
+					<hr class="vertical-space1" />
+					<div class="w-divider6">
+						<i class="colora  fa fa-heart"></i>
+						<h3>
+							<span class="colorf spl" style=" border-bottom: 1px solid; ">Experience</span>
+							<span class="spr">SUPERB SERVICE</span>
+						</h3>
+					</div>
+					<hr class="vertical-space3" />
+					<div class="text-center">
+						<a href="#" class="btn btn-primary">
+							BOOK A TABLE NOW
+						</a>
+					</div>
+					<hr class="vertical-space2" />
+					<hr class="vertical-space5" />
+					<hr class="vertical-space3" />
+				</div>
+			</section>
+		</template>
+	</data>
+</openerp>

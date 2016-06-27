@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="s_aliment_banner" name="Aliment Banner Snippet">
+			<section class="s_hive_banner">
+				<div id="myCarousel1454476124746" class="carousel slide s_banner oe_custom_bg"
+						data-interval="10000" style=" overflow: hidden;">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel1454476124746" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#myCarousel1454476124746" data-slide-to="1"
+								class=""></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="item oe_img_bg oe_custom_bg active">
+								<img class="img img-responsive" src="/theme_aliment/static/img/food-banner-1.jpg"
+									style="position:relative;width:100%;" />
+								<div class="container">
+									<div class="row content hidden-xs">
+
+										<div class="nivo-caption">
+											<div class="timethai"
+												style=" 
+											position:absolute;
+											top:0;
+											left:0;
+											background-color:rgba(152, 122, 116, 0.82);
+											height:5px;
+											-webkit-animation: myfirst 5000ms ease-in-out;
+											-moz-animation: myfirst 5000ms ease-in-out;
+											-ms-animation: myfirst 5000ms ease-in-out;
+											animation: myfirst 5000ms ease-in-out;">
+											</div>
+											<div class="banner7-content slider-2">
+												<div class="bannerslideshow ">
+													<h1 class="title1">
+														<span>The Real SPICY MASALAS</span>
+													</h1>
+													<h2 class="title2">
+														<span>THE REAL TAST IN YOUR HANDS</span>
+													</h2>
+													<div class="banner7-readmore">
+														<a href="#" title="Read more">Read more</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br />
+									</div>
+								</div>
+							</div>
+
+
+							<div class="item oe_img_bg oe_custom_bg">
+								<img class="img img-responsive" src="/theme_aliment/static/img/food-banner-2.jpg"
+									style="position:relative;width:100%;" />
+								<div class="container">
+									<div class="row content hidden-xs">
+										<div class="nivo-caption">
+											<div class="timethai"
+												style=" 
+													position:absolute;
+													top:0;
+													left:0;
+													background-color:rgba(152, 122, 116, 0.82);
+													height:5px;
+													-webkit-animation: myfirst 5000ms ease-in-out;
+													-moz-animation: myfirst 5000ms ease-in-out;
+													-ms-animation: myfirst 5000ms ease-in-out;
+													animation: myfirst 5000ms ease-in-out;">
+											</div>
+											<div class="banner7-content slider-2">
+												<div class="bannerslideshow ">
+													<h1 class="title1">
+														<span>Delecious FRESH FOODS</span>
+													</h1>
+													<h2 class="title2">
+														<span>THE REAL TAST IN YOUR HANDS</span>
+													</h2>
+													<div class="banner7-readmore">
+														<a href="#" title="Read more">Read more</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<br />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+		</template>
+	</data>
+</openerp>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<template id="s_state_counter" name="State Counter Snippet">
+			<section class="container" id="state-counter">
+				<hr class="vertical-space3" />
+				<div class="w-divider6">
+					<i class="colora fa fa-leaf"></i>
+					<h3>
+						<span class="colorf spl" style=" border-bottom: 1px solid; ">Facts</span>
+						<span class="spr">ABOUT ALIMENT</span>
+					</h3>
+				</div>
+				<hr class="vertical-space2" />
+				<div class="wpb_text_column wpb_content_element ">
+					<p style="text-align: center;">
+						Here we try to share our vision about food quality, our
+						mission
+						about customer’s satisfaction
+						<br />
+						and introducing services that we provide for you.
+					</p>
+				</div>
+				<hr class="vertical-space2" />
+				<div class="col-sm-4">
+					<div class="s-counter max-counter" data-effecttype="counter"
+						data-counter="136">
+
+						<i class="icon-counter fa fa-heart"></i>
+						<span class="max-count">136</span>
+						<h5>Unique Meals in Menu</h5>
+
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="s-counter  max-counter" data-effecttype="counter"
+						data-counter="999">
+						<i class="icon-counter fa fa-thumbs-up"></i>
+						<span class="max-count">999</span>
+						<h5>Satisfied Customers on facebook</h5>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="s-counter max-counter " data-effecttype="counter"
+						data-counter="18">
+						<i class="icon-counter fa fa-leaf"></i>
+						<span class="max-count">18</span>
+						<h5>Mew Recipe per Month</h5>
+					</div>
+				</div>
+				<hr class="vertical-space1" />
+			</section>
+		</template>
+	</data>
+</openerp>

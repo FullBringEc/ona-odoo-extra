@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+	<data>
+		<template id="snippet_product_carousel_73lines.new_products_item_mini"
+			name="Products item Mini">
+			<ul class="list-unstyled">
+				<li>
+					<form action="/shop/cart/update" method="post">
+						<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+						<div itemscope="itemscope" itemtype="http://schema.org/Product">
+							<div class="oe_product_image">
+								<a itemprop="url" t-att-href="'/shop/product/%s' % slug(product)"
+									class="product-mini">
+									<span itemprop="image" t-field="product.image"
+										t-field-options='{"widget": "image" #{None if product_image_big else ", \"resize\": \"100x100\""}}'
+										t-att-alt="product.name" />
+								</a>
+
+								<div class="product-price-mini">
+									<h6 style="height:35px;overflow:hidden;">
+										<strong>
+											<a itemprop="name" t-att-href="'/shop/product/%s' % slug(product)"
+												t-field="product.name" />
+										</strong>
+									</h6>
+
+									<div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer"
+										class="product_price" t-if="product.product_variant_ids">
+										<b>
+											<t
+												t-if="(compute_currency(product.lst_price) - product.price) &gt; 0.1">
+												<del class="text-danger mr8" style="white-space: nowrap;"
+													t-field="product.lst_price"
+													t-field-options='{
+									                          "widget": "monetary",
+									                          "from_currency": "product.company_id.currency_id",
+									                          "display_currency": "website.currency_id"
+									                        }' />
+											</t>
+											<h6 t-field="product.price" style="white-space: nowrap;"
+												class="text-primary"
+												t-field-options='{
+								                           "widget": "monetary",
+								                           "display_currency": "website.currency_id"
+								                       }'>
+											</h6>
+											<h6 itemprop="price" style="display:none;" t-esc="product.price" />
+											<h6 itemprop="priceCurrency" style="display:none;"
+												t-esc="website.currency_id.name" />
+										</b>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</form>
+				</li>
+			</ul>
+		</template>
+	</data>
+</openerp>
